@@ -7,7 +7,6 @@ import ProgressBar from './progressbar.jsx';
 import './ProgressBar.css'; 
 import useLocalStorage from './useLocalStorage'; 
 
-
 function ToDoList() {
     const [tasks, setTasks] = useLocalStorage('tasks', []);
     const [completedTasks, setCompletedTasks] = useLocalStorage('completedTasks', []);
@@ -44,8 +43,10 @@ function ToDoList() {
     }
 
     function deleteTask(index) {
-        const updatedTasks = tasks.filter((_, i) => i !== index);
-        setTasks(updatedTasks);
+        if (window.confirm("Are you sure you want to delete this task?")) {
+            const updatedTasks = tasks.filter((_, i) => i !== index);
+            setTasks(updatedTasks);
+        }
     }
 
     function completeTask(index) {
@@ -55,16 +56,22 @@ function ToDoList() {
     }
 
     function deleteCompletedTask(index) {
-        const updatedCompletedTasks = completedTasks.filter((_, i) => i !== index);
-        setCompletedTasks(updatedCompletedTasks);
+        if (window.confirm("Are you sure you want to delete this completed task?")) {
+            const updatedCompletedTasks = completedTasks.filter((_, i) => i !== index);
+            setCompletedTasks(updatedCompletedTasks);
+        }
     }
 
     function deleteAllTasks() {
-        setTasks([]);
+        if (window.confirm("Are you sure you want to delete all tasks?")) {
+            setTasks([]);
+        }
     }
 
     function deleteAllCompletedTasks() {
-        setCompletedTasks([]);
+        if (window.confirm("Are you sure you want to delete all completed tasks?")) {
+            setCompletedTasks([]);
+        }
     }
 
     function completeAllTasks() {
