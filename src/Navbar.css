@@ -1,0 +1,44 @@
+.lexmeetnavbar {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #F4512C;
+    padding: 10px 4%;
+    z-index: 1000;
+}
+
+.logo {
+    width: 130px;
+}
+
+ul {
+    flex: 1;
+    list-style: none;
+    text-align: center;
+    margin: 0; /* Ensure no default margin */
+    padding: 0; /* Ensure no default padding */
+}
+
+ul li {
+    display: inline-block;
+    margin: 10px 20px;
+    font-size: 10px;
+    cursor: pointer;
+    background-color: #F4512C;
+    border: #F4512C;
+    color: #F8FFFE;
+}
+
+.clock {
+    color: white;
+    text-align: right;
+    margin-right: 150px;
+}
+
+.clock div {
+    font-size: 14px;
+}
