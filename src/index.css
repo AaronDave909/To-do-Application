@@ -206,7 +206,7 @@ li {
 :root {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color-scheme: light dark;
-  color: rgba(0, 0, 0, 0.87);
+  color: rgb(63, 63, 63);
   background-color: #5a2f2f;
 }
 
